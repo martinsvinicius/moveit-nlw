@@ -26,13 +26,13 @@ export function ExperienceBar() {
 
     return(
         <header className="experience-bar">
-            <span><button className="removeXP" onClick={handlerRemoveXP} > - </button> 0 xp </span>
+            <span><button className="removeXP" onClick={handlerRemoveXP} >-</button>0 xp</span>
             <div>
                 <div style={{ width: `${xp}%` }} />
 
-                <span className="current-experience" style={{ left: `${xp}%` }}> {xpValue} xp </span>
+                <span className="current-experience" style={{ left: `${xp}%` }}>{xpValue} xp</span>
             </div>
-            <span>600 xp <button className="addXP" onClick={handlerAddXP}> + </button></span>
+            <span>600 xp<button className="addXP" onClick={handlerAddXP}>+</button></span>
         </header>
     );
 }

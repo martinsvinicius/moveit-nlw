@@ -1,3 +1,4 @@
+import { CompletedChallengers } from "../components/CompletedChallengers";
 import { ExperienceBar } from "../components/ExpericenceBar";
 import { Profile } from "../components/Profile";
 
@@ -10,8 +11,9 @@ export default function Home() {
       <ExperienceBar />
 
       <section>
-        <div className={styles.countDownContainer}>
+        <div className={styles.leftContainer}>
           <Profile />
+          <CompletedChallengers />
         </div>
         <div>
           <h1>Desafios</h1>

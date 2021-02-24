@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+//styles
+import styles from '../styles/components/ExperienceBar.module.css'
+
 export function ExperienceBar() {
     const [xp, setXp] = useState(50);
     const [xpValue, setXpValue] = useState(300);
@@ -25,14 +28,14 @@ export function ExperienceBar() {
     }
 
     return(
-        <header className="experience-bar">
-            <span><button className="removeXP" onClick={handlerRemoveXP} > - </button> 0 xp</span>
+        <header className={styles.experienceBar}>
+            <span><button className={styles.removeXP} onClick={handlerRemoveXP} > - </button> 0 xp</span>
             <div>
                 <div style={{ width: `${xp}%` }} />
 
-                <span className="current-experience" style={{ left: `${xp}%` }}>{xpValue} xp</span>
+                <span className={styles.currentExperience} style={{ left: `${xp}%` }}>{xpValue} xp</span>
             </div>
-            <span> 600 xp <button className="addXP" onClick={handlerAddXP}> + </button></span>
+            <span> 600 xp <button className={styles.addXP} onClick={handlerAddXP}> + </button></span>
         </header>
     );
 }

@@ -1,0 +1,48 @@
+.experienceBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experienceBar span {
+  font-size: 1rem;
+}
+
+.experienceBar > div {
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--gray-line);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.experienceBar > div > div {
+  height: 4px;
+  border-radius: 4px;
+  background: var(--green);
+}
+
+span.currentExperience {
+  position: absolute;
+  top: 12px;
+  transform: translateX(-50%);
+}
+
+button.removeXP {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--red);
+  border: none;
+  outline: none;
+  color: var(--background);
+}
+
+button.addXP {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--blue);
+  border: none;
+  outline: none;
+  color: var(--background);
+}

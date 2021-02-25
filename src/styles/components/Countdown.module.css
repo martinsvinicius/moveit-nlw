@@ -1,4 +1,4 @@
-.countdownContainer {
+.timerContainer {
   display: flex;
   align-items: center;
   font-family: Rajdhani;
@@ -6,7 +6,7 @@
   color: var(--title);
 }
 
-.countdownContainer > div {
+.timerContainer>div {
   flex: 1;
 
   display: flex;
@@ -20,30 +20,29 @@
   text-align: center;
 }
 
-.countdownContainer > div > span {
+.timerContainer>div>span {
   flex: 1;
 }
 
-.countdownContainer > div > span:first-child {
+.timerContainer>div>span:first-child {
   border-right: 1px solid #f0f1f3;
 }
 
-.countdownContainer > div > span:last-child {
+.timerContainer>div>span:last-child {
   border-left: 1px solid #f0f1f3;
 }
 
-.countdownContainer > span {
+.timerContainer>span {
   font-size: 6.25rem;
   margin: 0.5rem;
 }
 
-.countdownButton {
+.countdownContainer>button {
   width: 100%;
   height: 5rem;
 
   margin-top: 2rem;
 
-  background: var(--blue);
   color: var(--white);
   border-radius: 5px;
   font-size: 1.25rem;
@@ -56,6 +55,24 @@
   transition: background-color 0.2s;
 }
 
-.countdownButton:hover {
+.countdownContainer>button:disabled {
+  background: var(--white);
+  color: var(--text);
+  cursor: not-allowed;
+}
+
+.startCountdown {
+  background: var(--blue);
+}
+
+.startCountdown:hover {
   background: var(--blue-dark);
+}
+
+.cancelCountdown {
+  background: var(--red);
+}
+
+.cancelCountdown:hover {
+  background: var(--red-dark);
 }

@@ -15,3 +15,8 @@
   gap: 6.25rem;
   align-content: center;
 }
+
+.container section > div:last-child {
+  background: var(--white);
+  box-shadow: 0 0 60px rgb(0, 0, 0, 0.05);
+}

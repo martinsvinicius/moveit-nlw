@@ -1,0 +1,26 @@
+.challengerContainer {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.challengerContainer p:first-child {
+  font-size: 1.5rem;
+
+  margin-bottom: 4rem;
+}
+
+.challengerContainer img {
+  margin-bottom: 1.5rem;
+}
+
+.challengerContainer p:last-child {
+  font-size: 0.8rem;
+}

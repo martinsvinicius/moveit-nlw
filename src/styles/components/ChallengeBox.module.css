@@ -62,37 +62,50 @@
     justify-content: center;
 }
 
-.challengeActive strong {
-    font-size: 1.5rem;
-    padding: 1rem 0;
+.challengeActive main strong {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
     color: var(--title);
 }
 
+.challengeActive main p {
+    line-height: 1.5;
+}
+
+.challengeActive footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
 .challengeActive footer button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     height: 3rem;
     width: 10rem;
 
+    border: 0;
     border-radius: 5px;
+
+    font-size: 1rem;
+    font-weight: 600;
     
-    transition: background-color 0.2s;
+    transition: filter 0.2s;
 }
 
 .challengeActive footer button.challengeFailButton {
-    margin-right: 0.3rem;
     background: var(--red);
     color: var(--white);
 }
 
-.challengeActive footer button.challengeFailButton:hover {
-    background: var(--red-dark);
-}
-
 .challengeActive footer button.challengeSucceededButton {
-    margin-left: 0.3rem;
     background: var(--green);
     color: var(--white);
 }
 
-.challengeActive footer button.challengeSucceededButton:hover {
-    background: var(--green-dark);
+.challengeActive footer button:hover {
+    filter: brightness(0.9);
 }

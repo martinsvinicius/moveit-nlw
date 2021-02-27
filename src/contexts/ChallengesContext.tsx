@@ -50,7 +50,6 @@ export function ChallengesProvider(props: ChallengesProviderProps) {
   //Functions
   function levelUp() {
     setLevel(level + 1);
-    alert("level up");
   }
 
   function startNewChallenge() {

@@ -1,53 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ChallengesContext } from "../contexts/ChallengesContext";
 
 //styles
 import styles from '../styles/components/ExperienceBar.module.css'
 
 export function ExperienceBar() {
-    const [xp, setXp] = useState(50);
-    const [xpValue, setXpValue] = useState(300);
+    const { currentExperience, experienceToNextLevel } = useContext(ChallengesContext);
 
-    useEffect(() => {
-        setXpValue(600 * (xp/100))
-    }, [xp]);
-
-    function handlerRemoveXP() {
-        if (xp === 0) {
-            alert('Você não pode mais remover XPs');
-        } else {
-            setXp(xp - 10);
-        }
-    }
-
-    function handlerAddXP() {
-        if (xp === 100) {
-            alert('Você não pode mais adicionar XPs');
-        } else {
-            setXp(xp + 10);
-        }
-    }
+    const percentToNextLevel = Math.round(100*currentExperience)/experienceToNextLevel;
 
     return(
         <header className={styles.experienceBar}>
             <span>0 xp</span>
             <div>
-                <div style={{ width: `${xp}%` }} />
+                <div style={{ width: `${percentToNextLevel}%` }} />
 
-                <span className={styles.currentExperience} style={{ left: `${xp}%` }}>{xpValue} xp</span>
+                <span className={styles.currentExperience} style={{ left: `${percentToNextLevel}%` }}>{currentExperience} xp</span>
             </div>
-            <span> 600 xp</span>
+            <span> {experienceToNextLevel} xp</span>
         </header>
     );
 }
-
-/**
- * <header className={styles.experienceBar}>
-        <span><button className={styles.removeXP} onClick={handlerRemoveXP} > - </button> 0 xp</span>
-        <div>
-            <div style={{ width: `${xp}%` }} />
-
-            <span className={styles.currentExperience} style={{ left: `${xp}%` }}>{xpValue} xp</span>
-        </div>
-        <span> 600 xp <button className={styles.addXP} onClick={handlerAddXP}> + </button></span>
-    </header>
- */
